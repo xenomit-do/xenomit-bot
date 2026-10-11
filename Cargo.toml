@@ -1,0 +1,27 @@
+[package]
+name = "xenomit_bot"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gpui-kit = { version = "0.6.6", default-features = false, features = ["component"] }
+gpui-base = "0.6.6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1.53.1", features = ["rt", "time"] }
+xenomit_backpage = { path = "../xenomit-backpage" }
+xenomit-behavior-engine = { path = "../xenomit-behavior-engine" }
+xenomit-bot-runtime = { path = "../xenomit-bot-runtime" }
+xenomit-game-api = { path = "../xenomit-game-api" }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+    "Win32_System_LibraryLoader",
+    "Win32_Graphics_Gdi",
+    "Win32_UI_Shell",
+    "Win32_Security_Cryptography",
+] }
