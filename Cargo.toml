@@ -1,5 +1,5 @@
 [package]
-name = "xenomit_bot"
+name = "xenomit-bot-gui"
 version = "0.1.0"
 edition = "2024"
 
@@ -9,10 +9,10 @@ gpui-base = "0.6.6"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tokio = { version = "1.53.1", features = ["rt", "time"] }
-xenomit_backpage = { path = "../xenomit-backpage" }
-xenomit-behavior-engine = { path = "../xenomit-behavior-engine" }
-xenomit-bot-runtime = { path = "../xenomit-bot-runtime" }
-xenomit-game-api = { path = "../xenomit-game-api" }
+xenomit_backpage = { git = "https://github.com/xenomit-do/xenomit-backpage", branch = "main" }
+xenomit-behavior-engine = { git = "https://github.com/xenomit-do/xenomit-behavior-engine", branch = "main" }
+xenomit-bot-runtime = { git = "https://github.com/xenomit-do/xenomit-bot-runtime", branch = "main" }
+xenomit-game-api = { git = "https://github.com/xenomit-do/xenomit-game-api", branch = "main" }
 
 [target.'cfg(windows)'.dependencies]
 windows-sys = { version = "0.61", features = [
