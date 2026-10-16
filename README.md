@@ -10,7 +10,7 @@ Build the player and controller from the `repos` directory:
 
 ```powershell
 cargo build --manifest-path .\xenomit-ruffle-client\Cargo.toml --bin xenomit_ruffle_client
-cargo run --manifest-path .\xenomit-bot\Cargo.toml
+cargo run --manifest-path .\xenomit-bot-gui\Cargo.toml
 ```
 
 The controller looks for `xenomit_ruffle_client.exe` in the same directory and then

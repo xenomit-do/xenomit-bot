@@ -1,4 +1,4 @@
-# xenomit-bot notes
+# xenomit-bot-gui notes
 
 GPUI desktop controller for `xenomit-client`. Module metadata comes from the
 behavior engine; settings are persisted in `modules.json`. Start runs
@@ -11,7 +11,7 @@ which feeds `GameSnapshot`s from `xenomit-game-api` into
 
 Phase 0 split the crate in two (orchestrator `docs/02-headless-bot.md` §2.1):
 
-- `xenomit-bot` (this repo) is the thin GPUI shell. `src/bot/view/` holds
+- `xenomit-bot-gui` (this repo) is the thin GPUI shell. `src/bot/view/` holds
   `BotView` (state struct, `Render`, `Drop` in `mod.rs`) with behavior split
   into `impl BotView` blocks per concern: `theme` (palette/widgets), `chrome`
   (titlebar/header/menu), `login`, `launch` (child-process launch, log
@@ -24,7 +24,7 @@ Phase 0 split the crate in two (orchestrator `docs/02-headless-bot.md` §2.1):
   overlay + tests), `src/bot/module_settings/` (mod, maps, render, fields,
   edit + tests) and `src/bot/mod.rs` (window bootstrap). Nothing
   planner-adjacent stays here.
-- `xenomit-bot-runtime` (sibling path dependency, **no gpui**) owns
+- `xenomit-bot-runtime` (git dependency, **no gpui**) owns
   `behavior.rs` (`PlannerRuntime`, worker, host actions, Backpage services),
   `statistics.rs`, `panel.rs`, `packet_client.rs`, `star_catalog.rs`, plus
   new `settings.rs` (`BotSettings`/`ClientKind`/`FlashBackend`/`SettingsStore`)
