@@ -8893,6 +8893,7 @@ checksum = "163b33ed8786455e2fa5d72f554057ce3f3182425434f756cd39c99839d88e23"
 [[package]]
 name = "xenomit-behavior-engine"
 version = "0.1.0"
+source = "git+https://github.com/xenomit-do/xenomit-behavior-engine?branch=main#a94243d95ef6fcbec6224930951fd47558466fd1"
 dependencies = [
  "serde",
  "serde_json",
@@ -8901,9 +8902,27 @@ dependencies = [
 ]
 
 [[package]]
-name = "xenomit-bot-runtime"
+name = "xenomit-bot-gui"
 version = "0.1.0"
 dependencies = [
+ "gpui-base",
+ "gpui-kit",
+ "serde",
+ "serde_json",
+ "tokio",
+ "windows-sys 0.61.2",
+ "xenomit-behavior-engine",
+ "xenomit-bot-runtime",
+ "xenomit-game-api",
+ "xenomit_backpage",
+]
+
+[[package]]
+name = "xenomit-bot-runtime"
+version = "0.1.0"
+source = "git+https://github.com/xenomit-do/xenomit-bot-runtime?branch=main#9fbc89ab0bf09b3bd5c7007bb0dbfc2136d9c6de"
+dependencies = [
+ "flate2",
  "regex",
  "reqwest",
  "roxmltree 0.20.0",
@@ -8920,6 +8939,7 @@ dependencies = [
 [[package]]
 name = "xenomit-game-api"
 version = "0.1.0"
+source = "git+https://github.com/xenomit-do/xenomit-game-api?branch=main#60c27a5c48fbae0817c2dc8d205fdffda61ea60d"
 dependencies = [
  "roxmltree 0.20.0",
  "serde",
@@ -8931,6 +8951,7 @@ dependencies = [
 [[package]]
 name = "xenomit-packet-client"
 version = "0.1.0"
+source = "git+https://github.com/xenomit-do/xenomit-packet-client?branch=main#30f170e93e65aa25579abd6a4b66f704a6b30f16"
 dependencies = [
  "base64 0.22.1",
  "serde_json",
@@ -8942,6 +8963,7 @@ dependencies = [
 [[package]]
 name = "xenomit_backpage"
 version = "0.1.0"
+source = "git+https://github.com/xenomit-do/xenomit-backpage?branch=main#a7d1588f397cd41fd945cf90fa2c2c08f902ec2b"
 dependencies = [
  "base64 0.22.1",
  "flate2",
@@ -8954,22 +8976,6 @@ dependencies = [
  "thiserror 2.0.21",
  "tokio",
  "zeroize",
-]
-
-[[package]]
-name = "xenomit_bot"
-version = "0.1.0"
-dependencies = [
- "gpui-base",
- "gpui-kit",
- "serde",
- "serde_json",
- "tokio",
- "windows-sys 0.61.2",
- "xenomit-behavior-engine",
- "xenomit-bot-runtime",
- "xenomit-game-api",
- "xenomit_backpage",
 ]
 
 [[package]]
